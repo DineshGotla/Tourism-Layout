@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+
+:root{
+    --max-width:1400px
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background-image:url("oceanBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    max-width: var(--max-width);
+    max-height: 100vh;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: larger;
+    color: white;
+}
+
+.nav__logo img{
+    width: 90px;
+    border:2px solid white;
+    border-radius: 50%;
+}
+
+.nav__links{
+    list-style: none;
+    display:flex;
+    align-items: center; 
+    gap:2rem;
+}
+.link a{
+    text-decoration: none;
+    font-weight: 600;
+    color:white;
+}
+
+a:hover{
+    scale:1.1;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+.search{
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem 1rem;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    background-color: white;
+    border-radius: 2rem;
+    transition: 0.3s;
+}
+
+.search input{
+    width:100%;
+    font-size: 1rem;
+    color: #006054;
+    outline: none;
+    border:none;
+}
+
+.search input::placeholder{
+    color: #017479;
+}
+
+.search span{
+    font-size: 1.5rem;
+    color: #006054;
+}
+
+.login{
+    padding: 0.5rem 1rem;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    font-weight: 600;
+    color:white;
+    background-color: #006054;
+    border-radius: 2rem;
+    cursor:pointer;
+    transition: 0.3s;
+}
+
+.login:hover{
+    background-color: #017479;
+}
+
+.login span{
+    padding: 5px 8px;
+    font-size: 1.5rem;
+    color: #006054;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.destination_containers{
+    position:relative;
+    padding: 5rem 0rem 5rem 5rem;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.social{
+    position: absolute;
+    top: 20rem;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.social::after{
+    position: absolute;
+    content: "";
+    top: -18rem;
+    left: 15px;
+    height:10rem;
+    width:2px;
+    background-color: white;;
+}
+
+.social span{
+    font-size: 2rem;
+    color:white;
+}
+
+.content h1{
+    margin-bottom: 1rem;
+    font: 4.5rem;
+    font-weight: 800;
+    color:white;
+}
+
+.content h1 span{
+    -webkit-text-stroke: white;
+    -webkit-text-fill-color: transparent;
+}
+
+.content .btn{
+    padding:0.75rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color:white;
+    background-color: #017479;
+    cursor: pointer;
+}
+
+.destination_class{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1rem;
+    display: flex;
+}
+
+.destination_card{
+    background-color: #006054;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destination_card img{
+    width:300px;
+    height:100%
+}
+
+.destination_card:hover{
+    box-shadow: 0 0 3px 2px black;
+    scale: 1.2;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+}
+.destination_card h4{
+    color: white;
+}
+
+.destination_card .btn{
+    background-color: aquamarine;
+    width: 6rem;
+    height:2rem;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #017479;
+    scale:1.1;
+}
